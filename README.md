@@ -1,73 +1,184 @@
-# React + TypeScript + Vite
+# DevTools 开发工具箱
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+一个功能丰富的在线开发者工具箱，包含 70+ 实用工具，帮助开发者提高工作效率。
 
-Currently, two official plugins are available:
+## 功能概览
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### 🏠 首页
+- 工具导航和快速访问
 
-## React Compiler
+### 🔐 加解密
+| 工具 | 描述 |
+|------|------|
+| AES/RSA加解密 | AES 和 RSA 加密解密 |
+| RSA演示 | RSA 加密原理演示 |
+| Hash计算 | MD5、SHA 等哈希计算 |
+| 密码生成 | 随机密码生成器 |
+| 密码强度检测 | 检测密码安全强度 |
+| JWT解码 | JWT Token 解析 |
+| 文件哈希 | 计算文件哈希值 |
+| 信用卡验证 | 信用卡号验证 |
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 🔄 编码转换
+| 工具 | 描述 |
+|------|------|
+| URL/HTML编码 | URL 和 HTML 编码转换 |
+| Base64 | Base64 编码解码 |
+| 进制转换 | 二进制、八进制、十六进制转换 |
 
-## Expanding the ESLint configuration
+### 📝 文本处理
+| 工具 | 描述 |
+|------|------|
+| 文本工具 | 文本处理和转换 |
+| 文本统计 | 字数、字符数统计 |
+| 大小写转换 | 大小写格式转换 |
+| JSON格式化 | JSON 格式化和压缩 |
+| JSON/YAML转换 | JSON 和 YAML 互转 |
+| 正则测试 | 正则表达式测试 |
+| 正则可视化 | 正则表达式可视化 |
+| Diff对比 | 文本差异对比 |
+| 假文生成 | Lorem 假文生成 |
+| Markdown预览 | Markdown 实时预览 |
+| SQL格式化 | SQL 语句格式化 |
+| 摩斯码转换 | 摩斯码编码解码 |
+| ASCII艺术 | 文本转 ASCII 艺术 |
+| HTML实体编码 | HTML 实体编码转换 |
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 🛠️ 开发工具
+| 工具 | 描述 |
+|------|------|
+| UUID生成 | UUID/GUID 生成器 |
+| Cron解析 | Cron 表达式解析 |
+| 单位转换 | 常用单位换算 |
+| 计算器 | 科学计算器 |
+| 百分比计算 | 百分比计算工具 |
+| 贷款计算 | 贷款计算器（含提前还款） |
+| 数字格式化 | 数字格式转换 |
+| 代码格式化 | 多语言代码格式化 |
+| 代码片段 | 代码片段管理 |
+| 随机数据 | 随机数据生成 |
+| 假数据生成 | 测试数据生成 |
+| 开发常用 | 开发常用工具集 |
+| Playground | JS 代码运行环境 |
+| API测试 | HTTP API 测试工具 |
+| WebSocket测试 | WebSocket 连接测试 |
+| 键盘事件测试 | 键盘事件查看 |
+| JS性能测试 | JavaScript 性能测试 |
+| 排序可视化 | 排序算法可视化 |
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 🎨 设计工具
+| 工具 | 描述 |
+|------|------|
+| 颜色工具 | 颜色转换和选择 |
+| 颜色对比度 | 色彩对比度检测 |
+| 调色板生成 | 配色方案生成 |
+| 二维码生成 | QR Code 生成 |
+| CSS渐变 | CSS 渐变生成器 |
+| CSS阴影 | CSS 阴影生成器 |
+| CSS Clip-Path | 裁剪路径生成 |
+| CSS Grid | Grid 布局生成 |
+| CSS Flexbox | Flexbox 布局生成 |
+| CSS Transform | 变换效果生成 |
+| 代码转图片 | 代码截图美化 |
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### 🌐 网络时间
+| 工具 | 描述 |
+|------|------|
+| 网络工具 | 网络请求工具 |
+| URL解析 | URL 组成解析 |
+| 时间工具 | 时间戳转换 |
+| 世界时钟 | 全球时区查看 |
+| IP计算器 | IP 地址计算 |
+| 秒表 | 在线秒表 |
+| 倒计时 | 倒计时器 |
+| 番茄钟 | 番茄工作法计时 |
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 🖼️ 图片工具
+| 工具 | 描述 |
+|------|------|
+| 图片处理 | 图片编辑处理 |
+| 图片Base64 | 图片与 Base64 互转 |
+| 图片压缩 | 图片压缩工具 |
+| GIF生成器 | GIF 动图制作 |
+| 占位图片 | Lorem Picsum 占位图 |
+
+### ❤️ 健康工具
+| 工具 | 描述 |
+|------|------|
+| 健康计算器 | BMI、体脂率计算 |
+| 高级健康指标 | 详细健康指标 |
+| 预产期计算 | 孕期预产期计算 |
+| 儿童发育评估 | 儿童生长评估 |
+
+### ✅ 效率工具
+| 工具 | 描述 |
+|------|------|
+| 待办事项 | 任务管理列表 |
+| 快速笔记 | 临时笔记记录 |
+| 表情符号 | Emoji 选择器 |
+| 多重剪贴板 | 剪贴板历史管理 |
+
+### 📄 文档工具
+| 工具 | 描述 |
+|------|------|
+| Excel编辑器 | 在线编辑 Excel 文件 |
+| Word预览 | Word 文档在线预览 |
+| Markdown预览 | Markdown 实时预览 |
+
+## 技术栈
+
+- **前端框架**: React 19 + TypeScript
+- **构建工具**: Vite
+- **路由**: React Router DOM
+- **图标**: Lucide React
+- **样式**: CSS Variables (支持亮色/暗色主题)
+- **文档处理**:
+  - xlsx - Excel 文件处理
+  - mammoth - Word 文档预览
+
+## 快速开始
+
+### 安装依赖
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 开发模式
+```bash
+npm run dev
 ```
+
+### 构建生产版本
+```bash
+npm run build
+```
+
+### 预览构建结果
+```bash
+npm run preview
+```
+
+## 项目结构
+
+```
+src/
+├── components/
+│   ├── common/        # 通用组件 (Card, Button)
+│   └── Layout/        # 布局组件 (Navbar, ThemeToggle)
+├── pages/             # 页面组件
+├── App.tsx            # 主应用组件
+├── router.tsx         # 路由配置
+└── main.tsx           # 入口文件
+```
+
+## 特性
+
+- 🌙 亮色/暗色主题切换
+- 📱 响应式设计，支持移动端
+- 🔒 纯本地处理，保护隐私安全
+- ⚡ 快速加载，无需后端服务
+- 🆓 完全免费，开源使用
+
+## License
+
+MIT

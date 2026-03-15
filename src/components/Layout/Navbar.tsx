@@ -69,6 +69,8 @@ import {
   LayoutGrid,
   Columns,
   RotateCw,
+  FileSpreadsheet,
+  FileType,
 } from 'lucide-react';
 import { ThemeToggle } from './ThemeToggle';
 import './Navbar.css';
@@ -213,6 +215,15 @@ const navGroups: NavItem[] = [
       { path: '/notes', label: '快速笔记', icon: <StickyNote size={16} /> },
       { path: '/emoji', label: '表情符号', icon: <Smile size={16} /> },
       { path: '/multi-clip', label: '多重剪贴板', icon: <ClipboardList size={16} /> },
+    ],
+  },
+  {
+    label: '文档工具',
+    icon: <FileText size={16} />,
+    children: [
+      { path: '/excel', label: 'Excel编辑器', icon: <FileSpreadsheet size={16} /> },
+      { path: '/word', label: 'Word预览', icon: <FileType size={16} /> },
+      { path: '/markdown', label: 'Markdown预览', icon: <FileCheck size={16} /> },
     ],
   },
 ];

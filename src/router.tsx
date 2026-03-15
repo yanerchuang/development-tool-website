@@ -76,6 +76,8 @@ import NumberFormatter from './pages/NumberFormatter';
 import UrlParser from './pages/UrlParser';
 import HtmlEntityEncoder from './pages/HtmlEntityEncoder';
 import TransformGenerator from './pages/TransformGenerator';
+import ExcelViewer from './pages/ExcelViewer';
+import WordViewer from './pages/WordViewer';
 
 export const router = createBrowserRouter([
   {
@@ -158,6 +160,8 @@ export const router = createBrowserRouter([
       { path: 'url-parser', element: <UrlParser /> },
       { path: 'html-entity', element: <HtmlEntityEncoder /> },
       { path: 'transform', element: <TransformGenerator /> },
+      { path: 'excel', element: <ExcelViewer /> },
+      { path: 'word', element: <WordViewer /> },
     ],
   },
 ]);
