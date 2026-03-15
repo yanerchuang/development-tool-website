@@ -1,3 +1,4 @@
+/* Home - 科技风首页 */
 .home {
   max-width: 1200px;
   margin: 0 auto;
@@ -5,59 +6,189 @@
 
 .home-header {
   text-align: center;
-  margin-bottom: 40px;
-  padding: 40px 0;
+  margin-bottom: 48px;
+  padding: 60px 20px;
+  position: relative;
+}
+
+.home-header::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(14, 165, 233, 0.1) 0%, transparent 70%);
+  pointer-events: none;
 }
 
 .home-header h1 {
-  font-size: 36px;
+  font-size: 42px;
   font-weight: 700;
-  color: var(--text-primary);
-  margin-bottom: 12px;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.home-header h1 span {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .home-header p {
-  font-size: 16px;
+  font-size: 18px;
   color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
 }
 
+/* 统计信息 */
+.home-stats {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  margin-top: 32px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border-color);
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 36px;
+  font-weight: 700;
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.stat-label {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 4px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* 工具分类标题 */
+.category-section {
+  margin-bottom: 40px;
+}
+
+.category-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.category-title::before {
+  content: '';
+  width: 4px;
+  height: 24px;
+  background: var(--accent-gradient);
+  border-radius: 2px;
+}
+
+.category-icon {
+  color: var(--accent-primary);
+}
+
+/* 工具网格 */
 .tools-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 20px;
+  gap: 16px;
 }
 
+/* 工具卡片 - 科技风 */
 .tool-card {
   display: flex;
   align-items: center;
   gap: 16px;
   padding: 20px;
-  background: var(--bg-secondary);
+  background: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
   text-decoration: none;
   transition: all var(--transition-speed);
+  position: relative;
+  overflow: hidden;
+}
+
+.tool-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--accent-gradient);
+  opacity: 0;
+  transition: opacity var(--transition-speed);
+}
+
+.tool-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.05) 0%, transparent 50%);
+  opacity: 0;
+  transition: opacity var(--transition-speed);
 }
 
 .tool-card:hover {
-  border-color: var(--accent-primary);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
+  border-color: rgba(14, 165, 233, 0.4);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md), var(--glow-sm);
+}
+
+.tool-card:hover::before {
+  opacity: 1;
+}
+
+.tool-card:hover::after {
+  opacity: 1;
 }
 
 .tool-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 48px;
-  height: 48px;
-  background: var(--bg-tertiary);
-  border-radius: var(--border-radius);
+  width: 52px;
+  height: 52px;
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.1), rgba(139, 92, 246, 0.1));
+  border: 1px solid rgba(14, 165, 233, 0.2);
+  border-radius: 12px;
   color: var(--accent-primary);
+  transition: all var(--transition-speed);
+  flex-shrink: 0;
+}
+
+.tool-card:hover .tool-icon {
+  background: var(--accent-gradient);
+  border-color: transparent;
+  color: white;
+  box-shadow: var(--glow-sm);
+}
+
+.tool-info {
+  flex: 1;
+  min-width: 0;
 }
 
 .tool-info h3 {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
   color: var(--text-primary);
   margin-bottom: 4px;
@@ -65,5 +196,35 @@
 
 .tool-info p {
   font-size: 13px;
-  color: var(--text-secondary);
+  color: var(--text-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+  .home-header {
+    padding: 40px 16px;
+  }
+
+  .home-header h1 {
+    font-size: 28px;
+  }
+
+  .home-header p {
+    font-size: 15px;
+  }
+
+  .home-stats {
+    gap: 24px;
+  }
+
+  .stat-value {
+    font-size: 28px;
+  }
+
+  .tools-grid {
+    grid-template-columns: 1fr;
+  }
 }

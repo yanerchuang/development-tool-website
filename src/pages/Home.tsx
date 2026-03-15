@@ -30,7 +30,7 @@ export default function Home() {
   return (
     <div className="home">
       <div className="home-header">
-        <h1>开发者工具箱</h1>
+        <h1>开发者<span>工具箱</span></h1>
         <p>一站式在线开发工具集合，助力提升开发效率</p>
       </div>
       <div className="tools-grid">
