@@ -59,6 +59,23 @@ import EmojiPicker from './pages/EmojiPicker';
 import JsBenchmark from './pages/JsBenchmark';
 import PaletteGenerator from './pages/PaletteGenerator';
 import LoremPicsum from './pages/LoremPicsum';
+import CreditCardGenerator from './pages/CreditCardGenerator';
+import FakeDataGenerator from './pages/FakeDataGenerator';
+import MultiClipboard from './pages/MultiClipboard';
+import CodeSnippets from './pages/CodeSnippets';
+import RSATool from './pages/RSATool';
+import SortingVisualizer from './pages/SortingVisualizer';
+import PercentageCalculator from './pages/PercentageCalculator';
+import LoanCalculator from './pages/LoanCalculator';
+import AsciiArtGenerator from './pages/AsciiArtGenerator';
+import TextStatistics from './pages/TextStatistics';
+import CssGridGenerator from './pages/CssGridGenerator';
+import FlexboxGenerator from './pages/FlexboxGenerator';
+import CaseConverter from './pages/CaseConverter';
+import NumberFormatter from './pages/NumberFormatter';
+import UrlParser from './pages/UrlParser';
+import HtmlEntityEncoder from './pages/HtmlEntityEncoder';
+import TransformGenerator from './pages/TransformGenerator';
 
 export const router = createBrowserRouter([
   {
@@ -124,6 +141,23 @@ export const router = createBrowserRouter([
       { path: 'benchmark', element: <JsBenchmark /> },
       { path: 'palette', element: <PaletteGenerator /> },
       { path: 'picsum', element: <LoremPicsum /> },
+      { path: 'credit-card', element: <CreditCardGenerator /> },
+      { path: 'fake-data', element: <FakeDataGenerator /> },
+      { path: 'multi-clip', element: <MultiClipboard /> },
+      { path: 'snippets', element: <CodeSnippets /> },
+      { path: 'rsa', element: <RSATool /> },
+      { path: 'sorting', element: <SortingVisualizer /> },
+      { path: 'percentage', element: <PercentageCalculator /> },
+      { path: 'loan', element: <LoanCalculator /> },
+      { path: 'ascii-art', element: <AsciiArtGenerator /> },
+      { path: 'text-stats', element: <TextStatistics /> },
+      { path: 'css-grid', element: <CssGridGenerator /> },
+      { path: 'flexbox', element: <FlexboxGenerator /> },
+      { path: 'case', element: <CaseConverter /> },
+      { path: 'number-format', element: <NumberFormatter /> },
+      { path: 'url-parser', element: <UrlParser /> },
+      { path: 'html-entity', element: <HtmlEntityEncoder /> },
+      { path: 'transform', element: <TransformGenerator /> },
     ],
   },
 ]);
