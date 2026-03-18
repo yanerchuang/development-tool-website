@@ -78,6 +78,23 @@ import HtmlEntityEncoder from './pages/HtmlEntityEncoder';
 import TransformGenerator from './pages/TransformGenerator';
 import ExcelViewer from './pages/ExcelViewer';
 import WordViewer from './pages/WordViewer';
+import XmlFormatter from './pages/XmlFormatter';
+import JsonSchemaValidator from './pages/JsonSchemaValidator';
+import CsvViewer from './pages/CsvViewer';
+import CodeDiff from './pages/CodeDiff';
+import JsonPath from './pages/JsonPath';
+import GitignoreGenerator from './pages/GitignoreGenerator';
+import DockerfileGenerator from './pages/DockerfileGenerator';
+import SvgOptimizer from './pages/SvgOptimizer';
+import SqlBuilder from './pages/SqlBuilder';
+import CodeMinifier from './pages/CodeMinifier';
+import I18nTool from './pages/I18nTool';
+import EnvManager from './pages/EnvManager';
+import RegexBuilder from './pages/RegexBuilder';
+import GitCheatsheet from './pages/GitCheatsheet';
+import TimestampBatch from './pages/TimestampBatch';
+import LogAnalyzer from './pages/LogAnalyzer';
+import TypeScriptGenerator from './pages/TypeScriptGenerator';
 
 const basename = import.meta.env.BASE_URL;
 
@@ -165,6 +182,23 @@ export const router = createBrowserRouter(
         { path: 'transform', element: <TransformGenerator /> },
         { path: 'excel', element: <ExcelViewer /> },
         { path: 'word', element: <WordViewer /> },
+        { path: 'xml', element: <XmlFormatter /> },
+        { path: 'json-schema', element: <JsonSchemaValidator /> },
+        { path: 'csv', element: <CsvViewer /> },
+        { path: 'code-diff', element: <CodeDiff /> },
+        { path: 'json-path', element: <JsonPath /> },
+        { path: 'gitignore', element: <GitignoreGenerator /> },
+        { path: 'dockerfile', element: <DockerfileGenerator /> },
+        { path: 'svg-optimizer', element: <SvgOptimizer /> },
+        { path: 'sql-builder', element: <SqlBuilder /> },
+        { path: 'code-minify', element: <CodeMinifier /> },
+        { path: 'i18n', element: <I18nTool /> },
+        { path: 'env-manager', element: <EnvManager /> },
+        { path: 'regex-builder', element: <RegexBuilder /> },
+        { path: 'git-cheatsheet', element: <GitCheatsheet /> },
+        { path: 'timestamp-batch', element: <TimestampBatch /> },
+        { path: 'log-analyzer', element: <LogAnalyzer /> },
+        { path: 'ts-generator', element: <TypeScriptGenerator /> },
       ],
     },
   ],
