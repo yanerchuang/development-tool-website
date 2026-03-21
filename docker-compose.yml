@@ -1,0 +1,7 @@
+services:
+  dev-tools:
+    build: .
+    container_name: dev-tools
+    ports:
+      - "3000:80"
+    restart: unless-stopped
